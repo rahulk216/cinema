@@ -1,0 +1,36 @@
+.content-wrapper {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+@media screen and (max-width: 700px) {
+  .thumbnails {
+    position: relative;
+  }
+
+  .thumbnails img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .play-icon {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .player-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (width > 700px) {
+}

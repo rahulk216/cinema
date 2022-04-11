@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import ReactPlayer from 'react-player';
+
 import Homepage from './Page/Homepage';
 
 function App() {
