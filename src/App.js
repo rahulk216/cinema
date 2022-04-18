@@ -1,5 +1,5 @@
+import React from "react";
 import './App.css';
-
 import Homepage from './Page/Homepage';
 
 function App() {

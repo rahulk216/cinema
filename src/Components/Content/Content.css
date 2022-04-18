@@ -7,7 +7,23 @@
   margin-top: 20px;
   min-height: 200px;
 }
-
+.thumbnails{
+  margin-top:1rem;
+}
+.pc{
+  display: none;
+}
+@media screen and (min-width:768px){
+  .mobile{
+    display:none;
+  }
+  .pc{
+    display: block;
+  }
+  .slider-img{
+    height:50%;
+  }
+}
 @media screen and (max-width: 700px) {
   .thumbnails {
     position: relative;
@@ -32,5 +48,3 @@
   }
 }
 
-@media screen and (width > 700px) {
-}
