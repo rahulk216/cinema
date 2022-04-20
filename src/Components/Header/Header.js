@@ -6,7 +6,7 @@ import Commercial from '../Commercial/Commercial';
 import Music from '../Music/Music';
 import About from '../About/About';
 import './Header.css';
-
+import { useQuery } from 'react-query';
 //sanity
 import sanityClient from '../../client.js';
 
@@ -14,14 +14,36 @@ export const display = (category, data) => {
 	if (category === '') {
 		return data;
 	} else {
-		console.log(data);
 		return data?.filter((item) => item.category === category);
 	}
+};
+
+const getCinemas = async () => {
+	return await sanityClient.fetch(`*[_type == "post"]{
+		title,
+		thumbnail{
+			asset->{
+				_id,
+				url
+			},
+			alt
+		},
+		video,
+		description,
+		category,
+		time,
+		director,
+		DOP,
+		productions
+	}`);
 };
 
 const Header = () => {
 	const [post, setPost] = useState(null);
 	console.log(post);
+
+	const { error, data, isLoading } = useQuery('posts', getCinemas);
+
 	const [showMenu, setShowMenu] = useState(false);
 	const uniqueCategory = () => {
 		if (cinema_data) {
@@ -31,31 +53,31 @@ const Header = () => {
 	};
 	const menuOptions = `menuOpt ${showMenu ? 'start' : ''}`;
 
-	const getPosts = async () => {
-		const temp = await sanityClient.fetch(`*[_type == "post"]{
-			title,
-			thumbnail{
-				asset->{
-					_id,
-					url
-				},
-				alt
-			},
-			video,
-			description,
-			category,
-			time,
-			director,
-			DOP,
-			productions
-		}`);
-		setPost(temp);
-	};
+	// const getPosts = async () => {
+	// 	const temp = await sanityClient.fetch(`*[_type == "post"]{
+	// 		title,
+	// 		thumbnail{
+	// 			asset->{
+	// 				_id,
+	// 				url
+	// 			},
+	// 			alt
+	// 		},
+	// 		video,
+	// 		description,
+	// 		category,
+	// 		time,
+	// 		director,
+	// 		DOP,
+	// 		productions
+	// 	}`);
+	// 	setPost(temp);
+	// };
 
 	//sanity connecting
-	useEffect(() => {
-		getPosts();
-	}, []);
+	// useEffect(() => {
+	// 	getPosts();
+	// }, []);
 
 	return (
 		<div className='header-wrapper'>
@@ -113,9 +135,9 @@ const Header = () => {
 			</div>
 
 			<Routes>
-				<Route path='/' element={<Home data={post} />} />
-				<Route path='/commercial' element={<Commercial data={post} />} />
-				<Route path='/music' element={<Music data={post} />} />
+				<Route path='/' element={<Home data={data} />} />
+				<Route path='/commercial' element={<Commercial data={data} />} />
+				<Route path='/music' element={<Music data={data} />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>
