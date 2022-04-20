@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Content.css";
 import { FaPlayCircle } from "react-icons/fa";
 import ReactPlayer from "react-player";
 
 const Content = ({ data }) => {
   const [showPlayer, setShowPlayer] = React.useState();
+  const [showModal, setShowModal] = React.useState(false);
+
+  const modalRef = useRef();
+
+  const closeModal = (e) => {
+    if (modalRef.current === e.target) {
+      setShowModal(false);
+    }
+  };
 
   return (
     <div className="content-wrapper">
@@ -12,9 +21,25 @@ const Content = ({ data }) => {
         data.map((item, index) => {
           return (
             <div>
-              <div onClick={() => setShowPlayer(index + 1)}>
-                {showPlayer === index + 1 ? (
-                  <div className="player-wrapper">
+              <div>
+                <div
+                  className="thumbnails"
+                  onClick={() => {
+                    setShowModal(true);
+                    setShowPlayer(index + 1);
+                  }}
+                >
+                  <img src={item.thumbnail} alt="thumbnail" />
+                  <div class="play-icon">
+                    <FaPlayCircle
+                      fontSize="40px"
+                      color="black"
+                      className="play-icon"
+                    />
+                  </div>
+                </div>
+                {showModal && showPlayer === index + 1 && (
+                  <div className="overlay" onClick={closeModal} ref={modalRef}>
                     <ReactPlayer
                       url={item.video}
                       playing={true}
@@ -29,17 +54,8 @@ const Content = ({ data }) => {
                         },
                       }}
                     />
-                  </div>
-                ) : (
-                  <div className="thumbnails">
-                    <img src={item.thumbnail} alt="thumbnail" />
-                    <div class="play-icon">
-                      <FaPlayCircle
-                        fontSize="40px"
-                        color="black"
-                        className="play-icon"
-                      />
-                    </div>
+                    <h1>{item.director}</h1>
+                    <h1>{item.description}</h1>
                   </div>
                 )}
               </div>
