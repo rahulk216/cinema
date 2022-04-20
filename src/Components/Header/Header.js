@@ -14,7 +14,8 @@ export const display = (category, data) => {
 	if (category === '') {
 		return data;
 	} else {
-		return data.filter((item) => item.category === category);
+		console.log(data);
+		return data?.filter((item) => item.category === category);
 	}
 };
 
@@ -31,8 +32,7 @@ const Header = () => {
 	const menuOptions = `menuOpt ${showMenu ? 'start' : ''}`;
 
 	const getPosts = async () => {
-		setPost(
-			await sanityClient.fetch(`*[_type == "post"]{
+		const temp = await sanityClient.fetch(`*[_type == "post"]{
 			title,
 			thumbnail{
 				asset->{
@@ -48,10 +48,10 @@ const Header = () => {
 			director,
 			DOP,
 			productions
-		}`)
-		);
+		}`);
+		setPost(temp);
 	};
-	
+
 	//sanity connecting
 	useEffect(() => {
 		getPosts();
