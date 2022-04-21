@@ -45,10 +45,11 @@ const Content = ({ data }) => {
                 </div>
                 {showModal && showPlayer === index + 1 && (
                   <div className="overlay" onClick={closeModal} ref={modalRef}>
-                    <ReactPlayer
+				  <div className="overlay-wrapper">
+                   {item.video? <ReactPlayer
                       url={item.video}
                       playing={true}
-                      width="88vw"
+                      width="88.2vw"
                       height="30vh"
                       config={{
                         youtube: {
@@ -58,10 +59,16 @@ const Content = ({ data }) => {
                           },
                         },
                       }}
-                    />
-                    <h1>{item.director}</h1>
-                    <h1>{item.description}</h1>
+                    /> : <img src="https://images.unsplash.com/photo-1650374471470-a46867a3ce06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="fallback" className="fallbackImage"></img> } 
+                    {item.title && <h1 className="title">{item.title}</h1>}
+                    {item.time && <p>{item.time}</p>}
+					<div className="details">
+					{item.director && <h1>{`Director: ${item.director}`}</h1>}
+					{item.DOP && <h1>{`DOP: ${item.DOP}`}</h1>}
+					{item.productions && <h1>{`Production: ${item.productions}`}</h1>}
+					</div>
                   </div>
+				  </div>
                 )}
               </div>
             </div>
