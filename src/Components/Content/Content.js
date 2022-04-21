@@ -60,6 +60,7 @@ const Content = ({ data }) => {
 						</div>
 					);
 				})}
+			<div className='spacing' style={{ marginBottom: '8rem' }} />
 
 			<div className='pc'>
 				<Splide>
