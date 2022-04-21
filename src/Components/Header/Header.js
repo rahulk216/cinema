@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import cinema_data from '../../data';
+
 import Home from '../Home/Home';
 import Commercial from '../Commercial/Commercial';
 import Music from '../Music/Music';
 import About from '../About/About';
+import Narrative from '../Narrative/Narrative';
+import Archives from '../Archives/Archives';
+
 import './Header.css';
 import { useQuery } from 'react-query';
 //sanity
@@ -43,7 +47,7 @@ const Header = () => {
 	console.log(post);
 
 	const { error, data, isLoading } = useQuery('posts', getCinemas);
-
+	console.log(data);
 	const [showMenu, setShowMenu] = useState(false);
 	const uniqueCategory = () => {
 		if (cinema_data) {
@@ -52,32 +56,6 @@ const Header = () => {
 		}
 	};
 	const menuOptions = `menuOpt ${showMenu ? 'start' : ''}`;
-
-	// const getPosts = async () => {
-	// 	const temp = await sanityClient.fetch(`*[_type == "post"]{
-	// 		title,
-	// 		thumbnail{
-	// 			asset->{
-	// 				_id,
-	// 				url
-	// 			},
-	// 			alt
-	// 		},
-	// 		video,
-	// 		description,
-	// 		category,
-	// 		time,
-	// 		director,
-	// 		DOP,
-	// 		productions
-	// 	}`);
-	// 	setPost(temp);
-	// };
-
-	//sanity connecting
-	// useEffect(() => {
-	// 	getPosts();
-	// }, []);
 
 	return (
 		<div className='header-wrapper'>
@@ -138,6 +116,8 @@ const Header = () => {
 				<Route path='/' element={<Home data={data} />} />
 				<Route path='/commercial' element={<Commercial data={data} />} />
 				<Route path='/music' element={<Music data={data} />} />
+				<Route path='/narrative' element={<Narrative data={data} />} />
+				<Route path='/archives' element={<Archives data={data} />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>
