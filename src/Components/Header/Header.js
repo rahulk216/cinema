@@ -8,6 +8,7 @@ import Music from '../Music/Music';
 import About from '../About/About';
 import Narrative from '../Narrative/Narrative';
 import Archives from '../Archives/Archives';
+import Showreel from '../Showreel/Showreel';
 
 import './Header.css';
 import { useQuery } from 'react-query';
@@ -92,6 +93,17 @@ const Header = () => {
 						})}
 						<li>
 							<NavLink
+								to='/showreel'
+								style={({ isActive }) => ({
+									color: isActive ? '#ffff' : '#a0a09f',
+								})}
+								onClick={() => setShowMenu(false)}
+							>
+								SHOWREEL
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
 								to='/about'
 								style={({ isActive }) => ({
 									color: isActive ? '#ffff' : '#a0a09f',
@@ -118,6 +130,7 @@ const Header = () => {
 				<Route path='/music' element={<Music data={data} />} />
 				<Route path='/narrative' element={<Narrative data={data} />} />
 				<Route path='/archives' element={<Archives data={data} />} />
+				<Route path='/showreel' element={<Showreel />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>

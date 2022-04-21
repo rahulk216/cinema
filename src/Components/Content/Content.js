@@ -44,6 +44,7 @@ const Content = ({ data }) => {
 											<img
 												src={item.thumbnail.asset.url}
 												alt='thumbnail'
+												lazyloading={false}
 											/>
 											<div className='play-icon'>
 												<FaPlayCircle
@@ -59,7 +60,7 @@ const Content = ({ data }) => {
 						</div>
 					);
 				})}
-        
+
 			<div className='pc'>
 				<Splide>
 					{data &&
@@ -69,7 +70,7 @@ const Content = ({ data }) => {
 									<img
 										src={item.thumbnail.asset.url}
 										alt='thumbnail'
-                    className='slider-img'
+										className='slider-img'
 									/>
 									<div className='play-icon'>
 										<FaPlayCircle

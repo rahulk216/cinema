@@ -1,5 +1,12 @@
 .footer-wrapper {
-  padding: 10px 20px;
+  border:1px solid white;
+  background-color: #000;
+  position:fixed;
+  bottom:0;
+  left: 0;
+  width:100%;
+  z-index:999;
+  text-align: center;
 }
 
 .footer-wrapper h1 {
@@ -20,4 +27,13 @@
 .social-media > *{
   margin:1rem 1.2rem;
   font-size: 1.6rem;
+}
+
+@media screen and (min-width:700px){
+  .footer-wrapper{
+    position:static;
+    border:none;
+    width:50%;
+    margin:auto;
+  }
 }
