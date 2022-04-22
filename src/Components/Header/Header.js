@@ -9,6 +9,7 @@ import About from '../About/About';
 import Narrative from '../Narrative/Narrative';
 import Archives from '../Archives/Archives';
 import Showreel from '../Showreel/Showreel';
+import Stills from '../Stills/Stills';
 
 import './Header.css';
 import { useQuery } from 'react-query';
@@ -48,7 +49,8 @@ const Header = () => {
 	console.log(post);
 
 	const { error, data, isLoading } = useQuery('posts', getCinemas);
-	console.log(data);
+	console.log(isLoading);
+
 	const [showMenu, setShowMenu] = useState(false);
 	const uniqueCategory = () => {
 		if (cinema_data) {
@@ -78,7 +80,7 @@ const Header = () => {
 							const route = item.replace(/ /g, '');
 
 							return (
-								<li>
+								<li key={index}>
 									<NavLink
 										to={`/${route}`}
 										style={({ isActive }) => ({
@@ -113,6 +115,17 @@ const Header = () => {
 								ABOUT
 							</NavLink>
 						</li>
+						<li>
+							<NavLink
+								to='/stills'
+								style={({ isActive }) => ({
+									color: isActive ? '#ffff' : '#a0a09f',
+								})}
+								onClick={() => setShowMenu(false)}
+							>
+								STILLS
+							</NavLink>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -125,12 +138,25 @@ const Header = () => {
 			</div>
 
 			<Routes>
-				<Route path='/' element={<Home data={data} />} />
-				<Route path='/commercial' element={<Commercial data={data} />} />
-				<Route path='/music' element={<Music data={data} />} />
-				<Route path='/narrative' element={<Narrative data={data} />} />
-				<Route path='/archives' element={<Archives data={data} />} />
+				<Route path='/' element={<Home data={data} loader={isLoading} />} />
+				<Route
+					path='/commercial'
+					element={<Commercial data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/music'
+					element={<Music data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/narrative'
+					element={<Narrative data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/archives'
+					element={<Archives data={data} loader={isLoading} />}
+				/>
 				<Route path='/showreel' element={<Showreel />} />
+				<Route path='/stills' element={<Stills />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>
