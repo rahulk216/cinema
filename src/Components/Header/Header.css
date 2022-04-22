@@ -1,6 +1,5 @@
-.header-wrapper {
-  
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .name {
   text-align: center;
 }
@@ -11,8 +10,10 @@ nav{
   align-items: center;
 }
 .name h1 {
-  font-size: 23px;
+  font-size: 2rem;
   font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing:8px;
 }
 
 .name h2 {

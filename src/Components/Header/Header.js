@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import cinema_data from '../../data';
+
 import Home from '../Home/Home';
 import Commercial from '../Commercial/Commercial';
 import Music from '../Music/Music';
 import About from '../About/About';
+import Narrative from '../Narrative/Narrative';
+import Archives from '../Archives/Archives';
+import Showreel from '../Showreel/Showreel';
+import Stills from '../Stills/Stills';
+
 import './Header.css';
 import { useQuery } from 'react-query';
 //sanity
@@ -43,6 +49,7 @@ const Header = () => {
 	console.log(post);
 
 	const { error, data, isLoading } = useQuery('posts', getCinemas);
+	console.log(isLoading);
 
 	const [showMenu, setShowMenu] = useState(false);
 	const uniqueCategory = () => {
@@ -52,32 +59,6 @@ const Header = () => {
 		}
 	};
 	const menuOptions = `menuOpt ${showMenu ? 'start' : ''}`;
-
-	// const getPosts = async () => {
-	// 	const temp = await sanityClient.fetch(`*[_type == "post"]{
-	// 		title,
-	// 		thumbnail{
-	// 			asset->{
-	// 				_id,
-	// 				url
-	// 			},
-	// 			alt
-	// 		},
-	// 		video,
-	// 		description,
-	// 		category,
-	// 		time,
-	// 		director,
-	// 		DOP,
-	// 		productions
-	// 	}`);
-	// 	setPost(temp);
-	// };
-
-	//sanity connecting
-	// useEffect(() => {
-	// 	getPosts();
-	// }, []);
 
 	return (
 		<div className='header-wrapper'>
@@ -99,7 +80,7 @@ const Header = () => {
 							const route = item.replace(/ /g, '');
 
 							return (
-								<li>
+								<li key={index}>
 									<NavLink
 										to={`/${route}`}
 										style={({ isActive }) => ({
@@ -114,6 +95,17 @@ const Header = () => {
 						})}
 						<li>
 							<NavLink
+								to='/showreel'
+								style={({ isActive }) => ({
+									color: isActive ? '#ffff' : '#a0a09f',
+								})}
+								onClick={() => setShowMenu(false)}
+							>
+								SHOWREEL
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
 								to='/about'
 								style={({ isActive }) => ({
 									color: isActive ? '#ffff' : '#a0a09f',
@@ -121,6 +113,17 @@ const Header = () => {
 								onClick={() => setShowMenu(false)}
 							>
 								ABOUT
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to='/stills'
+								style={({ isActive }) => ({
+									color: isActive ? '#ffff' : '#a0a09f',
+								})}
+								onClick={() => setShowMenu(false)}
+							>
+								STILLS
 							</NavLink>
 						</li>
 					</ul>
@@ -135,9 +138,25 @@ const Header = () => {
 			</div>
 
 			<Routes>
-				<Route path='/' element={<Home data={data} />} />
-				<Route path='/commercial' element={<Commercial data={data} />} />
-				<Route path='/music' element={<Music data={data} />} />
+				<Route path='/' element={<Home data={data} loader={isLoading} />} />
+				<Route
+					path='/commercial'
+					element={<Commercial data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/music'
+					element={<Music data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/narrative'
+					element={<Narrative data={data} loader={isLoading} />}
+				/>
+				<Route
+					path='/archives'
+					element={<Archives data={data} loader={isLoading} />}
+				/>
+				<Route path='/showreel' element={<Showreel />} />
+				<Route path='/stills' element={<Stills />} />
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>
