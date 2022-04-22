@@ -3,11 +3,6 @@ import "./Content.css";
 import { FaPlayCircle } from "react-icons/fa";
 import ReactPlayer from "react-player";
 
-//slide
-
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/skyblue";
-
 const Content = ({ data }) => {
   const [showPlayer, setShowPlayer] = React.useState();
   const [showModal, setShowModal] = React.useState(false);
@@ -86,30 +81,6 @@ const Content = ({ data }) => {
             </div>
           );
         })}
-
-      <div className="pc">
-        <Splide>
-          {data &&
-            data.map((item, index) => (
-              <div>
-                <SplideSlide>
-                  <img
-                    src={item.thumbnail.asset.url}
-                    alt="thumbnail"
-                    className="slider-img"
-                  />
-                  <div className="play-icon">
-                    <FaPlayCircle
-                      fontSize="40px"
-                      color="black"
-                      className="play-icon"
-                    />
-                  </div>
-                </SplideSlide>
-              </div>
-            ))}
-        </Splide>
-      </div>
     </div>
   );
 };
