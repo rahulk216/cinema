@@ -78,6 +78,7 @@ const About = () => {
 					storytelling to any project that I'm associated with.
 				</p>
 			</div>
+			<div style={{ marginBottom: '8rem' }} />
 		</div>
 	);
 };

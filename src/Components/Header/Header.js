@@ -115,17 +115,6 @@ const Header = () => {
 								ABOUT
 							</NavLink>
 						</li>
-						<li>
-							<NavLink
-								to='/stills'
-								style={({ isActive }) => ({
-									color: isActive ? '#ffff' : '#a0a09f',
-								})}
-								onClick={() => setShowMenu(false)}
-							>
-								STILLS
-							</NavLink>
-						</li>
 					</ul>
 				</nav>
 			</div>
@@ -156,7 +145,7 @@ const Header = () => {
 					element={<Archives data={data} loader={isLoading} />}
 				/>
 				<Route path='/showreel' element={<Showreel />} />
-				<Route path='/stills' element={<Stills />} />
+	
 				<Route path='/about' element={<About />} />
 			</Routes>
 		</div>
