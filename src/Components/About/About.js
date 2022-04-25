@@ -5,7 +5,10 @@ const About = () => {
 	return (
 		<div className='about-wrapper'>
 			<div className='about'>
-				<div className='about-text' style={{ padding: '4rem 2rem 4rem 2rem' }}>
+				<div
+					className='about-text'
+					style={{ padding: '4rem 2rem 4rem 2rem' }}
+				>
 					<div className='about-text-grid'>
 						<div className='about-text-grid-item'>
 							<p>
@@ -24,9 +27,6 @@ const About = () => {
 								worked with a theatre group and polished my photography
 								skills.
 							</p>
-						</div>
-						<div className='about-text-grid-item'></div>
-						<div className='about-text-grid-item'>
 							<p>
 								I loved capturing frames and people in action.
 								Eventually, I started making short films for college
@@ -45,6 +45,97 @@ const About = () => {
 								bring visual clarity, technique and a distinct
 								storytelling to any project that I'm associated with.
 							</p>
+						</div>
+						<div className='about-text-grid-item'></div>
+						<div className='about-text-grid-item'>
+							<h3>TOWER</h3>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Short Film Of The Year{' '}
+								</p>
+								<p>Shorted India, 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Best Short Film
+								</p>
+								<p>Mumbai Independent Film Festival 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Short Film Of The Month
+								</p>
+								<p>Shorted India, 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Best Long Short Film
+								</p>
+								<p>Kashi Indian International Film Festival 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Honorable Jury Mention</strong>
+								</p>
+								<p>6th Indian World Film Festival 2022</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Honorable Jury Mention</strong>
+								</p>
+								<p>6th Indian World Film Festival 2022</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Official selection</strong>
+								</p>
+								<p>Lift Off Global Network Sessions 2021 UK</p>
+								<p>12th Dada Saheb Phalke Film Festival 2022</p>
+								<p>
+									10th Mumbai Shorts International Film Festival 2021
+								</p>
+							</div>
+							<h3>GREEN ROOM</h3>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Audience Award
+								</p>
+								<p>Cannes Short Film Festival 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Official Showcase</strong>
+								</p>
+								<p>Dharamshala International Film Festival 2021</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Official selection</strong>
+								</p>
+								<p>Royal Stag Barrel Select Large Short Films 2021</p>
+								<p>Noble International Film Festival Awards 2021</p>
+								<p>Lift Off Global Network Sessions 2021 UK</p>
+							</div>
+
+							<h3>GHATAK</h3>
+							<div className='awards'>
+								<p>
+									<strong>Winner</strong> - Critics Choice Best
+								</p>
+								<p>Virgin Spring Cine Fest</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Semi Finalist</strong> - Best Music Video
+								</p>
+								<p>Rome Music Video Awards</p>
+							</div>
+							<div className='awards'>
+								<p>
+									<strong>Semi Finalist</strong> - Best Music Video
+								</p>
+								<p>Munich Music Video Awards</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -77,6 +168,92 @@ const About = () => {
 					believe that I bring visual clarity, technique and a distinct
 					storytelling to any project that I'm associated with.
 				</p>
+				<h3>TOWER</h3>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Short Film Of The Year{' '}
+					</p>
+					<p>Shorted India, 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Best Short Film
+					</p>
+					<p>Mumbai Independent Film Festival 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Short Film Of The Month
+					</p>
+					<p>Shorted India, 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Best Long Short Film
+					</p>
+					<p>Kashi Indian International Film Festival 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Honorable Jury Mention</strong>
+					</p>
+					<p>6th Indian World Film Festival 2022</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Honorable Jury Mention</strong>
+					</p>
+					<p>6th Indian World Film Festival 2022</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Official selection</strong>
+					</p>
+					<p>Lift Off Global Network Sessions 2021 UK</p>
+					<p>12th Dada Saheb Phalke Film Festival 2022</p>
+					<p>10th Mumbai Shorts International Film Festival 2021</p>
+				</div>
+				<h3>GREEN ROOM</h3>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Audience Award
+					</p>
+					<p>Cannes Short Film Festival 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Official Showcase</strong>
+					</p>
+					<p>Dharamshala International Film Festival 2021</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Official selection</strong>
+					</p>
+					<p>Royal Stag Barrel Select Large Short Films 2021</p>
+					<p>Noble International Film Festival Awards 2021</p>
+					<p>Lift Off Global Network Sessions 2021 UK</p>
+				</div>
+
+				<h3>GHATAK</h3>
+				<div className='awards'>
+					<p>
+						<strong>Winner</strong> - Critics Choice Best
+					</p>
+					<p>Virgin Spring Cine Fest</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Semi Finalist</strong> - Best Music Video
+					</p>
+					<p>Rome Music Video Awards</p>
+				</div>
+				<div className='awards'>
+					<p>
+						<strong>Semi Finalist</strong> - Best Music Video
+					</p>
+					<p>Munich Music Video Awards</p>
+				</div>
 			</div>
 			<div style={{ marginBottom: '8rem' }} />
 		</div>

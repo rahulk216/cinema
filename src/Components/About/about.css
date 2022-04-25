@@ -17,6 +17,12 @@
     display:block;
     color:#a0a09f;
 }
+.awards{
+    margin: 1rem 0rem;
+}
+.awards>p{
+    margin:0;
+}
 @media screen and (min-width: 700px) {
     .about{ 
         min-height:80vh;

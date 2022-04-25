@@ -9,7 +9,9 @@ import { FaImdb } from 'react-icons/fa';
 const Footer = () => {
 	return (
 		<footer className='footer-wrapper'>
-			<h1>contact: lalith@gmail.com</h1>
+			<a href='mailto:lalitshejwal@gmail.com'>
+				<h1>contact: lalitshejwal@gmail.com</h1>
+			</a>
 			<hr style={{ width: '80%', margin: 'auto' }} />
 			<div className='social-media'>
 				<a target='_blank' href='https://www.facebook.com/lalit.shejwal.9'>
