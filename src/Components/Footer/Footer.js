@@ -5,14 +5,15 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaVimeo } from 'react-icons/fa';
 import { FaImdb } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
 	return (
 		<footer className='footer-wrapper'>
-			<a href='mailto:lalitshejwal@gmail.com'>
+			<a className='email' href='mailto:lalitshejwal@gmail.com'>
 				<h1>contact: lalitshejwal@gmail.com</h1>
 			</a>
-			<hr style={{ width: '80%', margin: 'auto' }} />
+			<hr className='line' />
 			<div className='social-media'>
 				<a target='_blank' href='https://www.facebook.com/lalit.shejwal.9'>
 					<FaFacebook />
@@ -31,6 +32,9 @@ const Footer = () => {
 					href='https://pro.imdb.com/name/nm13329661/?ref_=instant_nm_1&q=Lalit%20Shejwal'
 				>
 					<FaImdb />
+				</a>
+				<a className='emailIcon' href='mailto:lalitshejwal@gmail.com'>
+					<FaEnvelope />
 				</a>
 			</div>
 		</footer>

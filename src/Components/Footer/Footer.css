@@ -8,7 +8,6 @@
   z-index:900;
   text-align: center;
 }
-
 .footer-wrapper h1 {
   font-size: 1rem;
   font-weight: 400;
@@ -27,16 +26,45 @@
 .social-media > *{
   margin: 1rem;
   font-size: 1.6rem;
+  
 }
 a{
   color:#a0a09f
 }
-
+.line{
+  width: '80%'; 
+  margin: 'auto'
+}
+.emailIcon{
+  display:none;
+}
 @media screen and (min-width:700px){
   .footer-wrapper{
-    position:static;
     border:none;
-    width:50%;
-    margin:auto;
+    top:40%;
+    bottom:90%;
+    right:100%;
+    width:10%;
+        
+  }
+  .emailIcon{
+    display:block;
+  }
+  .social-media{
+    flex-direction:column;
+    color: #fff;
+   
+  }
+  .social-media > *{
+    padding-right:4rem;
+  }
+  a{
+    color: #fff;
+  }
+  .footer-wrapper > a{
+    display:none
+  }
+  .line{
+    display:none
   }
 }
