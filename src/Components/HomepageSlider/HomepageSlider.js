@@ -23,7 +23,7 @@ const HomepageSlider = ({ data }) => {
 			setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
 		}, 5000);
 		return () => clearInterval(interval);
-	}, [activeIndex]);
+	}, [activeIndex, len]);
 
 	return (
 		<div className='pc'>

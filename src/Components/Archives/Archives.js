@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './archives.css';
 import { useQuery } from 'react-query';
 //sanity
@@ -29,7 +29,7 @@ const defaultOptions = {
 };
 
 const Archives = () => {
-	const { error, data, isLoading } = useQuery('stills', getStills);
+	const {  data, isLoading } = useQuery('stills', getStills);
 	console.log(isLoading);
 	console.log(data);
 	return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import cinema_data from '../../data';
 
@@ -9,7 +9,6 @@ import About from '../About/About';
 import Narrative from '../Narrative/Narrative';
 import Archives from '../Archives/Archives';
 import Showreel from '../Showreel/Showreel';
-import Stills from '../Stills/Stills';
 
 import './Header.css';
 import { useQuery } from 'react-query';
@@ -45,10 +44,9 @@ const getCinemas = async () => {
 };
 
 const Header = () => {
-	const [post, setPost] = useState(null);
-	console.log(post);
 
-	const { error, data, isLoading } = useQuery('posts', getCinemas);
+
+	const { data, isLoading } = useQuery('posts', getCinemas);
 	console.log(isLoading);
 
 	const [showMenu, setShowMenu] = useState(false);
