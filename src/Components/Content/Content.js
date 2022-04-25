@@ -142,9 +142,9 @@ const Content = ({ data, loader }) => {
 																)}
 																<div className='cinema_content'>
 																	{item.title && (
-																		<h2 className='title'>
+																		<p className='title'>
 																			{item.title}
-																		</h2>
+																		</p>
 																	)}
 																	{item.time && (
 																		<span className='time'>

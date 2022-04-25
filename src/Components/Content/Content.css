@@ -39,16 +39,15 @@
 }
 .description{
   padding-bottom: 1rem;
+  font-style:italic;
+  font-size: 1rem;
 }
 .item{
   display: flex;
 }
-.item>p>strong{
-  font-style: normal;
-}
+
 .item>p{
-  font-size: 1.2rem;
-  font-style: italic;
+  font-size: 1rem;
   margin:0;
 }
 @media screen and (min-width: 768px) {
@@ -88,11 +87,12 @@
   .title {
     margin-top: 6px;
     color: black;
+    font-size: 1.3rem;
+    margin-bottom:0.5rem;
   }
 
   .time {
     color: black;
-    font-style: italic;
   }
 
   .details {
