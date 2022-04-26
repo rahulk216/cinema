@@ -8,7 +8,9 @@
   width:100%;
   margin:auto;
 }
-
+.cinema_work > div{
+  padding-top:0.5rem;
+}
 .overlay {
   position: fixed;
   left: 0;

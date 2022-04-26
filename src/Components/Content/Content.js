@@ -156,37 +156,43 @@ const Content = ({ data, loader }) => {
 																			{item.description}
 																		</p>
 																	)}
-																	{item.director && (
-																		<div className='item'>
-																			<p>
-																				<strong>
-																					Director
-																				</strong>
-																				:{'       '}
-																				{item.director}
-																			</p>
-																		</div>
-																	)}
-																	{item.DOP && (
-																		<div className='item'>
-																			<p>
-																				<strong>DOP</strong>
-																				:{'       '}
-																				{item.DOP}
-																			</p>
-																		</div>
-																	)}
-																	{item.productions && (
-																		<div className='item'>
-																			<p>
-																				<strong>
-																					Productions
-																				</strong>
-																				:{'       '}
-																				{item.productions}
-																			</p>
-																		</div>
-																	)}
+																	<div className='cinema_work'>
+																		{item.director && (
+																			<div className='item'>
+																				<p>
+																					<strong>
+																						Director
+																					</strong>
+																					:{'       '}
+																					{item.director}
+																				</p>
+																			</div>
+																		)}
+																		{item.DOP && (
+																			<div className='item'>
+																				<p>
+																					<strong>
+																						DOP
+																					</strong>
+																					:{'       '}
+																					{item.DOP}
+																				</p>
+																			</div>
+																		)}
+																		{item.productions && (
+																			<div className='item'>
+																				<p>
+																					<strong>
+																						Productions
+																					</strong>
+																					:{'       '}
+																					{
+																						item.productions
+																					}
+																				</p>
+																			</div>
+																		)}
+																	</div>
 																	<div
 																		style={{
 																			marginBottom: '8rem',

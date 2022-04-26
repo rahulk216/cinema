@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.css';
+import { FaAward } from 'react-icons/fa';
 
 const About = () => {
 	return (
@@ -168,7 +169,11 @@ const About = () => {
 					believe that I bring visual clarity, technique and a distinct
 					storytelling to any project that I'm associated with.
 				</p>
-				<h3>TOWER</h3>
+				<br />
+				<h2 style={{ textAlign: 'center' }}>
+					AWARDS <FaAward />
+				</h2>
+				<h3 style={{ borderBottom: '2px solid white', maxWidth: '20%'}}>TOWER</h3>
 				<div className='awards'>
 					<p>
 						<strong>Winner</strong> - Short Film Of The Year{' '}
@@ -213,7 +218,7 @@ const About = () => {
 					<p>12th Dada Saheb Phalke Film Festival 2022</p>
 					<p>10th Mumbai Shorts International Film Festival 2021</p>
 				</div>
-				<h3>GREEN ROOM</h3>
+				<h3 style={{ borderBottom: '2px solid white', maxWidth: '40%'}}>GREEN ROOM</h3>
 				<div className='awards'>
 					<p>
 						<strong>Winner</strong> - Audience Award
@@ -235,7 +240,7 @@ const About = () => {
 					<p>Lift Off Global Network Sessions 2021 UK</p>
 				</div>
 
-				<h3>GHATAK</h3>
+				<h3 style={{ borderBottom: '2px solid white', maxWidth: '25%'}}>GHATAK</h3>
 				<div className='awards'>
 					<p>
 						<strong>Winner</strong> - Critics Choice Best

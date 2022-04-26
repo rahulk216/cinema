@@ -120,7 +120,7 @@ const Header = () => {
 				Menu
 			</div>
 			<div className='name'>
-				<h1>LALITH SHEJWAL</h1>
+				<h1>LALIT SHEJWAL</h1>
 				<h2>CINEMATOGRAPHER</h2>
 			</div>
 
