@@ -8,9 +8,11 @@
   width:100%;
   margin:auto;
 }
+
 .cinema_work > div{
   padding-top:0.5rem;
 }
+
 .overlay {
   position: fixed;
   left: 0;
@@ -37,21 +39,21 @@
   align-items: center;
   height: 70vh;
 }
-.cinema_content{
-  color:#000;
+.cinema_content {
+  color: #000;
 }
-.description{
+.description {
   padding-bottom: 1rem;
-  font-style:italic;
+  font-style: italic;
   font-size: 1rem;
 }
-.item{
+.item {
   display: flex;
 }
 
-.item>p{
+.item > p {
   font-size: 1rem;
-  margin:0;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .mobile {
@@ -94,7 +96,7 @@
     margin-top: 6px;
     color: black;
     font-size: 1.3rem;
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .time {
@@ -106,7 +108,6 @@
     font-weight: 100;
     font-size: 12px;
     color: black;
-   
   }
 
   .fallbackImage {
@@ -116,15 +117,15 @@
 
   .overlay-wrapper {
     background-color: #d9d9d9;
-background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding:1.5rem;
-    padding-top:3.5rem;
+    padding: 1.5rem;
+    padding-top: 3.5rem;
     position: relative;
-    z-index:940;
+    z-index: 940;
   }
 
   .close-btn {
@@ -134,13 +135,13 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
     top: 10px;
     right: 10px;
   }
+
+  .thumbnail-desktop {
+    display: none;
+  }
 }
 
 @media screen and (width > 700px) {
-  .thumbnails img {
-    width: 100%;
-  }
-
   .slider-container {
     width: 100%;
     position: relative;
@@ -210,5 +211,13 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   .next {
     right: 0;
     border-radius: 5px 0px 0px 5px;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .thumbnails {
+    display: none;
   }
 }
