@@ -18,7 +18,7 @@
     height:100%;
     background-color:rgba(0,0,0,0.5);
     transition: all 650ms ease-in-out;
-    
+    display:none;
 }
 .stills-grid-item:hover .hover-overlay{
     display:block;
