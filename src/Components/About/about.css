@@ -2,7 +2,7 @@
     background: url('../../images/Collage.png') center no-repeat;
     background-size: cover;
     min-height:200px;
-    margin:1.3rem;
+    margin:1.8rem;
     position: relative;
 }
 
@@ -25,7 +25,8 @@
 }
 @media screen and (min-width: 700px) {
     .about{ 
-        min-height:80vh;
+        min-height:60vh;
+        margin:4.5rem;
     }
     .about-text{
         display:block; 
