@@ -95,14 +95,25 @@ const Stills = () => {
                 >
                   {dummy(carouselImage)?.map((item, index) => (
                     <SplideSlide>
-                      <img className="splide-image" src={item.thumbnail.asset.url} alt="thumb" />
+                      <img
+                        className="splide-image"
+                        src={item.thumbnail.asset.url}
+                        alt="thumb"
+                      />
                     </SplideSlide>
                   ))}
                 </Splide>
               </div>
 
               <div className="splide-wrapper-desktop">
-                <Splide aria-label="My Favorite Images">
+                <Splide
+                  aria-label="My Favorite Images"
+                  options={{
+                    pagination: false,
+                    autoplay: true,
+                    loop: true,
+                  }}
+                >
                   {dummy(carouselImage)?.map((item, index) => (
                     <SplideSlide>
                       <img src={item.thumbnail.asset.url} alt="thumb" />

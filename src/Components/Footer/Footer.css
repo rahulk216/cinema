@@ -41,8 +41,9 @@ a {
     border: none;
     top: 45%;
     bottom: 90%;
-    right: 100%;
+    left: -2.4%;
     width: 10%;
+    z-index: -10;
   }
   .emailIcon {
     display: block;
@@ -52,7 +53,7 @@ a {
     color: #fff;
   }
   .social-media > * {
-    padding-right: 4rem;
+    /* padding-right: 4rem; */
   }
 
   a {
