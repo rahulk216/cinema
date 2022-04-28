@@ -74,21 +74,21 @@
   .show-all-grid-item {
     display: block;
     grid-column: span 3;
-    position:relative;
+    position: relative;
   }
-  .hover-overlay1 p{
-    font-size:1.2rem;
+  .hover-overlay1 p {
+    font-size: 1.2rem;
   }
-  .hover-overlay1{
-    position:absolute;
-    bottom:100%;
-    top:0;
-    left:0;
-    height:100%;
-    background-color:rgba(0,0,0,0.5);
-    display:none;
+  .hover-overlay1 {
+    position: absolute;
+    bottom: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
   }
-  .show-all-grid-item:hover .hover-overlay1{
+  .show-all-grid-item:hover .hover-overlay1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +124,7 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .player-wrapper {

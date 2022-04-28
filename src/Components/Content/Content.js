@@ -72,7 +72,7 @@ const Content = ({ data, loader }) => {
                           <div class="play-icon">
                             <FaPlayCircle
                               fontSize="40px"
-                              color="black"
+                              color="white"
                               className="play-icon"
                             />
                           </div>
