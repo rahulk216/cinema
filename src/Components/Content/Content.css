@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  width:100%;
-  margin:auto;
+  width: 100%;
+  margin: auto;
 }
 
-.cinema_work > div{
-  padding-top:0.5rem;
+.cinema_work > div {
+  padding-top: 0.5rem;
 }
 
 .overlay {
@@ -55,8 +55,8 @@
   font-size: 1rem;
   margin: 0;
 }
-.show-all-grid-item{
-  display:none;
+.show-all-grid-item {
+  display: none;
 }
 /*show all*/
 
@@ -65,13 +65,13 @@
     display: none;
   }
   /*show */
-  .show-all-grid{
+  .show-all-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr); 
-    grid-gap:1rem;
-    margin-top:2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
   }
-  .show-all-grid-item{ 
+  .show-all-grid-item {
     display: block;
     grid-column: span 3;
     position:relative;
@@ -90,9 +90,9 @@
   }
   .show-all-grid-item:hover .hover-overlay1{
     display: flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .pc {
     display: block;
@@ -100,13 +100,17 @@
   .slider-img {
     height: 50%;
   }
-  .content-wrapper{
-    width:80%;
+  .content-wrapper {
+    width: 80%;
   }
 }
 @media screen and (max-width: 700px) {
   .thumbnails {
     position: relative;
+  }
+
+  .desktop-modal {
+    display: none;
   }
 
   .thumbnails img {
@@ -222,37 +226,49 @@
     font-size: 2rem;
   }
 
-  .prev,
-  .next {
-    cursor: pointer;
-    z-index: 100;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 1rem;
-    margin-top: -3rem;
-    font-size: 40px;
-    font-weight: bold;
-    border-radius: 0px 5px 5px 0px;
-  }
-
-  .prev:hover,
-  .next:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: all 0.5s ease-in;
-  }
-
-  .next {
-    right: 0;
-    border-radius: 5px 0px 0px 5px;
-  }
-
   .overlay {
     display: none;
   }
 
   .thumbnails {
     display: none;
+  }
+
+  .desktop-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .desktop-modal-wrapper {
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+    display: flex;
+    width: 80%;
+    height: 70%;
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .close-btn-desktop {
+    margin-top: 1px;
+    position: absolute;
+    z-index: 999;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .cinema_content-desktop {
+    color: #000;
+    margin-left: 30px;
   }
 }

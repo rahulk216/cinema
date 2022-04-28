@@ -9,7 +9,6 @@
     position: relative;
     margin: auto;
     overflow: hidden;
-
   }
 
   .active {
@@ -45,7 +44,7 @@
 
   .slider-title {
     margin-top: 150px;
-    margin-right:14rem;
+    margin-right: 14rem;
     margin-bottom: 20px;
   }
 
@@ -62,14 +61,13 @@
     align-items: center;
     justify-content: center;
     margin-top: 200px;
-    margin-right:14rem;
+    margin-right: 14rem;
     cursor: pointer;
   }
 
   .prev,
   .next {
     cursor: pointer;
-    z-index: 100;
     position: absolute;
     top: 50%;
     width: auto;
