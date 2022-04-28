@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  width:100%;
-  margin:auto;
+  width: 100%;
+  margin: auto;
 }
 
-.cinema_work > div{
-  padding-top:0.5rem;
+.cinema_work > div {
+  padding-top: 0.5rem;
 }
 
 .overlay {
@@ -55,8 +55,8 @@
   font-size: 1rem;
   margin: 0;
 }
-.show-all-grid-item{
-  display:none;
+.show-all-grid-item {
+  display: none;
 }
 /*show all*/
 
@@ -65,34 +65,34 @@
     display: none;
   }
   /*show */
-  .show-all-grid{
+  .show-all-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr); 
-    grid-gap:1rem;
-    margin-top:2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
   }
-  .show-all-grid-item{ 
+  .show-all-grid-item {
     display: block;
     grid-column: span 3;
-    position:relative;
+    position: relative;
   }
-  .hover-overlay1 p{
-    font-size:1.2rem;
+  .hover-overlay1 p {
+    font-size: 1.2rem;
   }
-  .hover-overlay1{
-    position:absolute;
-    bottom:100%;
-    top:0;
-    left:0;
-    height:100%;
-    background-color:rgba(0,0,0,0.5);
-    display:none;
+  .hover-overlay1 {
+    position: absolute;
+    bottom: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
   }
-  .show-all-grid-item:hover .hover-overlay1{
+  .show-all-grid-item:hover .hover-overlay1 {
     display: flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .pc {
     display: block;
@@ -100,8 +100,8 @@
   .slider-img {
     height: 50%;
   }
-  .content-wrapper{
-    width:80%;
+  .content-wrapper {
+    width: 80%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -120,6 +120,7 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .player-wrapper {
