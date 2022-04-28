@@ -114,6 +114,7 @@ const Content = ({ data, loader }) => {
                                   playing={true}
                                   width="190%"
                                   height="100%"
+                                  controls={true}
                                   config={{
                                     youtube: {
                                       playerVars: {
@@ -228,6 +229,7 @@ const Content = ({ data, loader }) => {
                                     <ReactPlayer
                                       url={item.video}
                                       playing={true}
+                                      controls={true}
                                       width="88.2vw"
                                       height="30vh"
                                       config={{

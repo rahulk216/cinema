@@ -95,7 +95,7 @@ const Stills = () => {
                 >
                   {dummy(carouselImage)?.map((item, index) => (
                     <SplideSlide>
-                      <img src={item.thumbnail.asset.url} alt="thumb" />
+                      <img className="splide-image" src={item.thumbnail.asset.url} alt="thumb" />
                     </SplideSlide>
                   ))}
                 </Splide>
