@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 900;
   text-align: center;
+  z-index:-10;
 }
 .footer-wrapper h1 {
   font-size: 1rem;
@@ -41,7 +42,7 @@ a {
     border: none;
     top: 45%;
     bottom: 90%;
-    right: 100%;
+    left:-2.4%;
     width: 10%;
   }
   .emailIcon {
@@ -52,7 +53,7 @@ a {
     color: #fff;
   }
   .social-media > * {
-    padding-right: 4rem;
+    /* padding-right: 4rem; */
   }
 
   a {
