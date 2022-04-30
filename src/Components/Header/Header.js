@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
-import cinema_data from "../../data";
 
 import Home from "../Home/Home";
 import Commercial from "../Commercial/Commercial";
@@ -152,7 +151,10 @@ const Header = () => {
           path="/stills"
           element={<Stills data={data} loader={isLoading} />}
         />
-        <Route path="/showreel" element={<Showreel />} />
+        <Route
+          path="/showreel"
+          element={<Showreel data={data} loader={isLoading} />}
+        />
 
         <Route path="/about" element={<About />} />
       </Routes>

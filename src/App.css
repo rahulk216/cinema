@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 body {
   background-color: #000;
@@ -15,10 +12,10 @@ img {
   max-width: 100%;
   display: block;
 }
-p{
-  margin-top:1rem;
+p {
+  margin-top: 1rem;
 }
-.container{
-  width:90%;
+.container {
+  width: 90%;
   margin: auto;
 }

@@ -10,13 +10,13 @@
 .footer-wrapper h1 {
   font-size: 1rem;
   font-weight: 400;
-  color: #a0a09f;
+  color: #ffff;
   letter-spacing: 0.5px;
   text-align: center;
   margin: 0.5rem;
 }
 .social-media {
-  color: #a0a09f;
+  color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
   font-size: 1.6rem;
 }
 a {
-  color: #a0a09f;
+  color: #ffff;
 }
 .line {
   width: "80%";
@@ -43,7 +43,6 @@ a {
     bottom: 90%;
     left: -2.4%;
     width: 10%;
-    z-index: -10;
   }
   .emailIcon {
     display: block;
@@ -51,9 +50,6 @@ a {
   .social-media {
     flex-direction: column;
     color: #fff;
-  }
-  .social-media > * {
-    /* padding-right: 4rem; */
   }
 
   a {

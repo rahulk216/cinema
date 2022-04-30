@@ -5,10 +5,6 @@ import ReactPlayer from "react-player";
 import Lottie from "react-lottie";
 import * as animationData from "../../images/lf30_editor_u6zvcjey.json";
 
-//splide
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-
 import HomepageSlider from "../HomepageSlider/HomepageSlider";
 
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -54,6 +50,8 @@ const Content = ({ data, loader }) => {
               data={data}
               showAll={showAll}
               setShowAll={setShowAll}
+              setShowModalDesktop={setShowModalDesktop}
+              setShowDesktopPlayer={setShowDesktopPlayer}
             />
             <div className="show-all-grid">
               {data &&
@@ -203,7 +201,7 @@ const Content = ({ data, loader }) => {
                                   onClick={() => setShowModal(false)}
                                 >
                                   <AiFillCloseCircle
-                                    color="black"
+                                    color="white"
                                     fontSize="35px"
                                   />
                                 </div>
@@ -252,9 +250,13 @@ const Content = ({ data, loader }) => {
                                     {item.title && (
                                       <p className="title">{item.title}</p>
                                     )}
-                                    {item.time && (
-                                      <span className="time">{item.time}</span>
-                                    )}
+                                    <div className="time-wrapper">
+                                      {item.time && (
+                                        <span className="time">
+                                          {item.time}
+                                        </span>
+                                      )}
+                                    </div>
                                     {item.description && (
                                       <p className="description">
                                         {item.description}
