@@ -226,9 +226,11 @@
     font-size: 2rem;
   }
 
-  .overlay {
+  /* causes problem to player in landscape */
+
+  /* .overlay {
     display: none;
-  }
+  } */
 
   .thumbnails {
     display: none;
