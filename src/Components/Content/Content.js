@@ -96,7 +96,6 @@ const Content = ({ data, loader }) => {
                               <p>{item.title}</p>
                             </div>
                             <LazyLoadImage
-                              className="load"
                               alt="alt"
                               effect="blur"
                               src={item.thumbnail.asset.url}

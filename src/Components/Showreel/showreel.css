@@ -29,6 +29,9 @@
   }
 }
 @media screen and (min-width: 900px) {
+  .overlay {
+    display: none;
+  }
   .showreel-wrapper {
     width: 90%;
     height: 100%;
