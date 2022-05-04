@@ -17,10 +17,10 @@ const HomepageSlider = ({
     return (
       <div className="arrows">
         <span className="prev" onClick={prevSlide}>
-          &#10094; I
+          &#10094; 
         </span>
         <span className="next" onClick={nextSlide}>
-          I &#10095;
+          &#10095;
         </span>
       </div>
     );

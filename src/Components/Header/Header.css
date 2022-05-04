@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Open+Sans:ital@1&family=Poppins:wght@100;300&display=swap');
 
 .name {
   text-align: center;
@@ -12,8 +13,7 @@ nav {
 .name h1 {
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 8px;
+  font-family: 'Mouse Memoirs', sans-serif;
 }
 
 .name h2 {
@@ -31,11 +31,13 @@ a:-webkit-any-link {
 
 @media screen and (max-width: 900px) {
   .menu {
-    cursor: pointer;
     padding-top: 10px;
     letter-spacing: 1px;
     color: #a0a09f;
     text-align: center;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 900;
   }
   nav {
     display: flex;
@@ -58,7 +60,13 @@ a:-webkit-any-link {
     transition: max-height 1s ease-in;
   }
 
+  .name h1 {
+    letter-spacing: 1px;
+  margin-left: 0.5px;
+  } 
+
   .name h2 {
+    letter-spacing: 0.1px;
     margin-top: 5px;
     font-size: 15px;
     color: #a0a09f;
