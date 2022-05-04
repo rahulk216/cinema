@@ -1,11 +1,13 @@
 .about {
   background: url("../../images/Collage.png") center no-repeat;
   background-size: cover;
-  min-height: 200px;
-  margin: 1.8rem;
-  position: relative;
+  min-height: 130px;
+  margin-top:2rem;
+  object-fit: cover;
 }
-
+.pc-view{
+  display: none;
+}
 .about > * {
   position: relative;
   z-index: 10;
@@ -23,34 +25,86 @@
 .awards > p {
   margin: 0;
 }
+/*awards*/
+.award-layout{
+  width:90%;
+  margin:auto;
+  margin-top:1rem;
+}
+.award-box{
+  margin-top:3rem;
+}
+
+strong{
+  border-bottom:1px solid #fff;
+}
+.award-grid-item :first-child{
+  display:flex;
+  align-items: center;
+}
+.award-grid-item{
+    grid-column:1;
+    border-radius:30px;
+    padding-top:1rem;
+    margin-top:1rem;
+}
+.award-grid-item h3{
+  font-size:1rem;
+}
+.award-layout h1{
+  font-size:1.5rem;
+}
 @media screen and (min-width: 900px) {
-  .about {
-    min-height: 60vh;
-    margin: 4.5rem;
-  }
-  .about-text {
-    display: block;
-    padding-top: 3rem;
-  }
+
   .mobile-text {
     display: none;
   }
-  .about::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    opacity: 0.7;
-    z-index: 0;
+  .aboutpc-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:2rem;
+    background-color: #fff;
+    color: #000;
+    padding:2rem;
   }
-
-  .about-text-grid {
+  /* .aboutpc-grid :first-child, .aboutpc-grid :last-child{
+    margin-top:3rem;
+  } */
+  .pc-view{
+    display: block;
+    width:80%;
+    margin:auto;
+  }
+  .lalitimg{
+    background: url("../../images/lalit.jpg") center no-repeat;
+    background-size: cover;
+    height:500px;
+    object-fit: cover;
+   
+  }
+  .award-layout{
+    width:80%;
+  }
+  .award-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:2rem;
+    margin-top:2rem;
+  
+  }
+  .award-grid-item{
+    grid-column: span 1;
+  
+    border-radius:30px;
+    padding:1rem;
+  }
+  .award-grid-item h3{
+    font-size:1.2rem;
+  }
+  .award-layout h1{
+    font-size:2.5rem;
+  }
+  h3{
+    font-size:1.5rem;
   }
 }
