@@ -46,7 +46,6 @@ const getCinemas = async () => {
 const Header = () => {
   const category = ["commercial", "music", "narrative", "archives"];
   const { data, isLoading } = useQuery("posts", getCinemas);
-  console.log(isLoading);
 
   const [showMenu, setShowMenu] = useState(false);
 

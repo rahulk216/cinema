@@ -23,7 +23,7 @@
 .awards > p {
   margin: 0;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .about {
     min-height: 60vh;
     margin: 4.5rem;

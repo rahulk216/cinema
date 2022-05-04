@@ -5,6 +5,9 @@ import ReactPlayer from "react-player";
 import Lottie from "react-lottie";
 import * as animationData from "../../images/lf30_editor_u6zvcjey.json";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import HomepageSlider from "../HomepageSlider/HomepageSlider";
 
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -66,7 +69,12 @@ const Content = ({ data, loader }) => {
                             setShowPlayer(index + 1);
                           }}
                         >
-                          <img src={item.thumbnail.asset.url} alt="thumbnail" />
+                          <LazyLoadImage
+                            className="load"
+                            alt="alt"
+                            effect="blur"
+                            src={item.thumbnail.asset.url}
+                          />
                           <div class="play-icon">
                             <FaPlayCircle
                               fontSize="40px"
@@ -87,9 +95,10 @@ const Content = ({ data, loader }) => {
                             <div className="hover-overlay1">
                               <p>{item.title}</p>
                             </div>
-                            <img
+                            <LazyLoadImage
+                              alt="alt"
+                              effect="blur"
                               src={item.thumbnail.asset.url}
-                              alt="thumbnail"
                             />
                           </div>
                         )}
