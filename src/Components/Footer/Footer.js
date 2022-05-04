@@ -6,6 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FaVimeo } from 'react-icons/fa';
 import { FaImdb } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
 	return (
@@ -52,6 +53,9 @@ const Footer = () => {
 				</a>
 				<a className='emailIcon' href='mailto:lalitshejwal@gmail.com'>
 					<FaEnvelope />
+				</a>
+				<a target='_blank' rel='noreferrer' href='tel:+917666398500'>
+					<FaPhone />
 				</a>
 			</div>
 		</footer>
