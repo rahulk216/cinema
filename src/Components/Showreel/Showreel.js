@@ -52,7 +52,7 @@ const Showreel = () => {
 
   const [showreelPlayer, setShowreelPlayer] = React.useState();
   const [showreelModal, setShowreelModal] = React.useState(false);
-  console.log(displayData);
+  
   return (
     <div className="showreel-container">
       {isLoading ? (
