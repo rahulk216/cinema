@@ -54,18 +54,16 @@ const About = () => {
 							entry-level DSLR. Early into college, I worked with a
 							theatre group and polished my photography skills.
 						</p>
-						<p>
-							I loved capturing frames and people in action. 
-						</p>
+						<p>I loved capturing frames and people in action.</p>
 					</div>
 					<div className='aboutpc-grid-item'>
 						<div className='lalitimg'></div>
 					</div>
 					<div className='aboutpc-grid-item'>
-					<p>
-							Eventually,
-							I started making short films for college festivals and
-							projects, and later for my own independent production.
+						<p>
+							Eventually, I started making short films for college
+							festivals and projects, and later for my own independent
+							production.
 						</p>
 						<p>
 							Since then, I've never looked back. I went on to finish my
@@ -83,6 +81,11 @@ const About = () => {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className='download'>
+				<a href='../../images/Lalit_Shejwal_DOP_Resume.pdf' download>
+					<button>DOWNLOAD RESUME</button>
+				</a>
 			</div>
 			<div className='award-layout'>
 				<h1>
@@ -189,9 +192,10 @@ const About = () => {
 					<h3>GHATAK</h3>
 					<div className='award-grid'>
 						<div className='award-grid-item'>
-							<h3><strong>
-								Critics Choice Best
-								<FaAward />
+							<h3>
+								<strong>
+									Critics Choice Best
+									<FaAward />
 								</strong>
 							</h3>
 							<p>Virgin Spring Cine Fest</p>
