@@ -1,6 +1,7 @@
 import React from 'react';
 import './about.css';
 import { FaAward } from 'react-icons/fa';
+import LalitResume from '../../Assets/LalitResume.pdf';
 
 const About = () => {
 	return (
@@ -83,7 +84,7 @@ const About = () => {
 				</div>
 			</div>
 			<div className='download'>
-				<a href='../../images/Lalit_Shejwal_DOP_Resume.pdf' download>
+				<a download href={LalitResume}>
 					<button>DOWNLOAD RESUME</button>
 				</a>
 			</div>
