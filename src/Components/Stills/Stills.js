@@ -81,7 +81,7 @@ const Stills = () => {
           )}
 
           {carousel && (
-            <div>
+            <div className="splider-container">
               <div
                 className="splide-wrapper-mobile"
                 onClick={() => setCarousel(false)}

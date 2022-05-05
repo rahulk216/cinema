@@ -44,9 +44,16 @@
   .splide-wrapper-mobile {
     display: none;
   }
+
+  .splider-container {
+    width: 60%;
+    margin-left: 20%;
+  }
+
   .splide-wrapper-desktop {
     position: relative;
   }
+
   .close-button {
     position: absolute;
     z-index: 999;
