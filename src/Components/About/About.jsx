@@ -55,15 +55,18 @@ const About = () => {
 							theatre group and polished my photography skills.
 						</p>
 						<p>
-							I loved capturing frames and people in action. Eventually,
-							I started making short films for college festivals and
-							projects, and later for my own independent production.
+							I loved capturing frames and people in action. 
 						</p>
 					</div>
 					<div className='aboutpc-grid-item'>
 						<div className='lalitimg'></div>
 					</div>
 					<div className='aboutpc-grid-item'>
+					<p>
+							Eventually,
+							I started making short films for college festivals and
+							projects, and later for my own independent production.
+						</p>
 						<p>
 							Since then, I've never looked back. I went on to finish my
 							Cinematography studies from Mindscreen Film Institute in
@@ -186,9 +189,10 @@ const About = () => {
 					<h3>GHATAK</h3>
 					<div className='award-grid'>
 						<div className='award-grid-item'>
-							<h3>
+							<h3><strong>
 								Critics Choice Best
 								<FaAward />
+								</strong>
 							</h3>
 							<p>Virgin Spring Cine Fest</p>
 						</div>
