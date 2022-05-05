@@ -39,13 +39,16 @@ const getCinemas = async () => {
 		time,
 		director,
 		DOP,
-		productions
+		productions,
+    priority
 	}`);
 };
 
 const Header = () => {
   const category = ["commercial", "music", "narrative", "archives"];
-  const { data, isLoading } = useQuery("posts", getCinemas);
+  let { data, isLoading } = useQuery("posts", getCinemas);
+
+  data = data?.sort((a, b) => a.priority - b.priority);
 
   const [showMenu, setShowMenu] = useState(false);
 

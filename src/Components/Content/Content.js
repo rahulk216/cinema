@@ -21,8 +21,6 @@ const Content = ({ data, loader }) => {
   const [showModalDesktop, setShowModalDesktop] = React.useState(false);
   const [showDesktopPlayer, setShowDesktopPlayer] = React.useState();
 
-  console.log(showModalDesktop);
-
   const modalRef = useRef();
 
   const defaultOptions = {
