@@ -157,7 +157,7 @@ const About = () => {
 					</div>
 				</div>
 				<div className='award-box'>
-					<h3>GREEN</h3>
+					<h3>GREEN ROOM</h3>
 					<div className='award-grid'>
 						<div className='award-grid-item'>
 							<h3>
