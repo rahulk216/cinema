@@ -1,7 +1,7 @@
 import React from 'react';
 import './about.css';
 import { FaAward } from 'react-icons/fa';
-import LalitResume from '../../Assets/LalitResume.pdf';
+import LalitResume from '../../Assets/Lalit Shejwal DOP Resume.pdf';
 
 const About = () => {
 	return (
