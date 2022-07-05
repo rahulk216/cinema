@@ -32,7 +32,11 @@ const getShowreel = async () => {
 		time,
 		director,
 		DOP,
-		productions
+		productions,
+    editor,
+    unitdp,
+    ac,
+    colorist
 	}`);
 };
 
@@ -150,11 +154,43 @@ const Showreel = () => {
                             {item.productions && (
                               <div className="item">
                                 <p>
-                                  <strong>Productions</strong>:{"       "}
+                                  <strong>Production</strong>:{"       "}
                                   {item.productions}
                                 </p>
                               </div>
                             )}
+                            {item.unitdp && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>2nd Unit DP</strong>:{"       "}
+                                        {item.unitdp}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.ac && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>1st AC</strong>:{"       "}
+                                        {item.ac}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.colorist && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>Colorist</strong>:{"       "}
+                                        {item.colorist}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.editor && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>Editor</strong>:{"       "}
+                                        {item.editor}
+                                      </p>
+                                    </div>
+                                  )}
                           </div>
                         </div>
                       </div>
@@ -260,11 +296,43 @@ const Showreel = () => {
                                 {item.productions && (
                                   <div className="item">
                                     <p>
-                                      <strong>Productions</strong>:{"       "}
+                                      <strong>Production</strong>:{"       "}
                                       {item.productions}
                                     </p>
                                   </div>
                                 )}
+                                {item.unitdp && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>2nd Unit DP</strong>:{"       "}
+                                        {item.unitdp}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.ac && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>1st AC</strong>:{"       "}
+                                        {item.ac}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.colorist && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>Colorist</strong>:{"       "}
+                                        {item.colorist}
+                                      </p>
+                                    </div>
+                                  )}
+                                  {item.editor && (
+                                    <div className="item">
+                                      <p>
+                                        <strong>Editor</strong>:{"       "}
+                                        {item.editor}
+                                      </p>
+                                    </div>
+                                  )}
                               </div>
                               <div
                                 style={{

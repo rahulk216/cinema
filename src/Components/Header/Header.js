@@ -40,7 +40,11 @@ const getCinemas = async () => {
 		director,
 		DOP,
 		productions,
-    priority
+    priority,
+    editor,
+    unitdp,
+    ac,
+    colorist
 	}`);
 };
 
